@@ -1,3 +1,7 @@
+myAngular.run(function($rootScope){
+    $rootScope.color = "Pink";
+});
+
 myAngular.controller("myControl",function($scope){
 
     $scope.username = "Ümit Dengiz";
@@ -9,6 +13,8 @@ myAngular.controller("myControl",function($scope){
     $scope.fullName = function(){
         return $scope.firstName+ " " +$scope.lastName;
     }
+
+    $scope.color = "Blue";
 
     $scope.num1 = 3;
     $scope.num2 = 2;

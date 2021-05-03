@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS - Root Scope</title>
+
+    <link rel="icon" type="image/x-icon" href="images/angular-js.ico">
+
+    <script src="js/angular.min.js"></script>
+
+</head>
+
+<body ng-app = "myAngular">
+
+    <p>rootScope color : </p>
+    <h3>{{color}}</h3>
+
+    <div ng-controller = "myControl">
+        <p>Current Scope color in controller : </p>
+    <h3>{{color}}</h3>
+    </div>
+
+    <p>rootScope color : same</p>
+    <h3>{{color}}</h3>
+
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+
+</body>
+
+</html>
