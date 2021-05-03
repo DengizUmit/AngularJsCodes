@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AngularJS - Expressions</title>
+
+    <link rel="icon" type="image/x-icon" href="images/angular-js.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--<div ng-app = "myAngular" ng-controller = "myControl">
+        <p>First Expressions : {{7+4}}</p>
+        <p>Second Expressions : {{"yasssss AngularJS"}}</p>
+        <p><input type="text" style="background-color: {{myColor}}" ng-model="myColor"></p>
+    </div>
+
+    <script>
+        var myAngular  = angular.module("myAngular",[]);
+        myAngular.controller("myControl",function($scope){
+            $scope.myColor = 'darkgoldenrod';
+        });
+    </script>-->
+
+
+
+<div ng-app = "myAngular" ng-controller = "myControl">
+    <p>Job : {{job}}</p>
+    <p>years : <span ng-bind = "num1 * num2"></span></p>
+    <p>Person : {{person.firstName+ "  " +person.lastName}}</p>
+    <p>Days : {{days}}</p>
+    <p Days select : <span ng-bind = "days[1]"></span>></p>
+
+</div>
+
+<script>
+    var myAngular  = angular.module("myAngular",[]);
+    myAngular.controller("myControl",function($scope){
+        $scope.num1 = 3;
+        $scope.num2 = 2;
+        $scope.job = "Computer Engineer";
+        $scope.person = { firstName : "Ümit", lastName : "Dengiz"};
+        $scope.days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    });
+</script>
+
+
+</body>
+
+</html>
