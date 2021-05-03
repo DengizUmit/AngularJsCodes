@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AngularJS </title>
+
+    <link rel="icon" type="image/x-icon" href="images/angular-js.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--<div ng-app = "" ng-init = "username= 'Ümit Dengiz'">
+        <p>Kullanıcı adınızı giriniz : </p>
+        <p>Kullanıcı Adı : <input type="text" ng-model = "username"></p>
+        <h3 ng-bind = "username"></h3>
+    </div>-->
+
+    <div ng-app = "myAngular" ng-controller = "myControl">
+        <p>Name : <input type="text" ng-model = "firstName"></p>
+        <p>Surname : <input type="text" ng-model = "lastName"></p>
+        <h3>You : {{firstName+ "  " + lastName}}</h3>
+    </div>
+
+    <script>
+        var myAngular = angular.module("myAngular",[]);
+        myAngular.controller("myControl",function($scope){
+            $scope.firstName = "Ümit";
+            $scope.lastName = "Dengiz";
+        });
+    </script>
+
+</body>
+
+</html>
