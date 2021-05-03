@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS - ng Model Directives</title>
+
+    <link rel="icon" type="image/x-icon" href="images/angular-js.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <style>
+        input.ng-invalid{
+            border : 2px solid red;
+        }
+        input.ng-valid{
+            border : 2px solid green;
+        }
+        input.ng-empty{
+            border : 2px solid blue;
+        }
+        input.ng-pending{
+            border : 2px solid yellow;
+        }
+        input.ng-pristine{
+            border : 2px solid orange;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--<div ng-app = "myAngular" ng-controller = "myControl">
+        <p>Kullanıcı Adı : <input type="text" ng-model = "username"></p>
+        <h3>Kullanıcı Adınız : {{username}}</h3>
+    </div>-->
+
+
+    <!--<form ng-app = "" name = "myFrom">
+        E - Mail : <input type="email" name="myAddress" ng-model = "eposta">
+        <h3 ng-show = "myFrom.myAddress.$error.email">Error E-Mail</h3>      // $error than -> .number, email, requiered
+    </form>-->
+
+    <form ng-app = "myAngular" name = "myFrom" ng-controller = "myControl">
+        E - Mail : <input type="email" name="myAddress" ng-model = "eposta">
+        <h3>States</h3>
+        <p>Valid   : {{myFrom.myAddress.$valid}}</p>
+        <p>Dirty   : {{myFrom.myAddress.$dirty}}</p>
+        <p>Touched : {{myFrom.myAddress.$touched}}</p>
+    </form>
+
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    
+</body>
+
+</html>

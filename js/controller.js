@@ -1,5 +1,8 @@
 myAngular.controller("myControl",function($scope){
 
+    $scope.username = "Ümit Dengiz";
+    $scope.eposta = "umitdengiz@gmail.com";
+
     $scope.num1 = 3;
     $scope.num2 = 2;
 
