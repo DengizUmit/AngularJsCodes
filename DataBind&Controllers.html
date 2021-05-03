@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS - Data Bind & Controllers</title>
+
+    <link rel="icon" type="image/x-icon" href="images/angular-js.ico">
+
+    <script src="js/angular.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--<div ng-app = "myAngular" ng-controller = "myControl">
+        <input ng-model = "username">
+        <h3 ng-bind = "username"></h3>
+        <p>{{username}}</p>
+    </div>-->
+
+
+    <div ng-app = "myAngular" ng-controller = "myControl">
+        <p><input ng-model = "firstName"></p>
+        <p><input ng-model = "lastName"></p>
+        <h3> Name - Surname : {{fullName()}}</h3>
+        <p>{{username}}</p>
+    </div>
+
+    
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+
+</body>
+
+</html>

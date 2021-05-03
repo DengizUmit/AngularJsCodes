@@ -3,6 +3,13 @@ myAngular.controller("myControl",function($scope){
     $scope.username = "Ümit Dengiz";
     $scope.eposta = "umitdengiz@gmail.com";
 
+    $scope.firstName = "Ümit";
+    $scope.lastName = "Dengiz";
+
+    $scope.fullName = function(){
+        return $scope.firstName+ " " +$scope.lastName;
+    }
+
     $scope.num1 = 3;
     $scope.num2 = 2;
 
