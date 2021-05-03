@@ -22,6 +22,8 @@ myAngular.controller("myControl",function($scope){
     $scope.quantity  = 0;
     $scope.price = 0 ;
 
+    $scope.names = ["Nore", "Oliver", "Ava", "Emmet", "Nora", "Vivienne", "Theodore"];
+
     $scope.languages = ["HTML", "CSS", "JavaScript", "AngularJS", "RaeactJS", "VueJS", "NodeJS"];
 
     $scope.languagesAll = [
