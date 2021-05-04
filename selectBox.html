@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS - Services</title>
+
+    <link rel="icon" type="image/x-icon" href="images/angular-js.ico">
+
+    <script src="js/angular.min.js"></script>
+
+</head>
+
+<body>
+
+    <div ng-app = "myAngular" ng-controller = "myControl">
+
+        <select ng-model = "slcCar" ng-options = "x for(x, y) in cars"></select>
+
+        <select ng-model = "slcLanguage" ng-options = "x.language for x in languagesAll"></select>
+
+        <select ng-model = "slcName">
+            <option ng-repeat = "x in languagesAll" value = "{{x.languages}}">{{x.languages}}</option>
+        </select>
+
+        <h3>Car  : {{slcCar}}</h3>
+        <h3>Language : {{slcLanguage.languages}}</h3>
+        <h3>Name : {{slcName.name}}</h3>
+
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controller.js"></script>
+
+</body>
+
+</html>

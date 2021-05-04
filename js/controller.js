@@ -13,6 +13,7 @@ myAngular.controller("filterControl",function($scope){
         {name: "Ramiz", language : "Python"},
         {name: "Ezel", language : "C"}
     ];
+
     $scope.orderMe = function(par){
         $scope.myOrder = par;
     }
@@ -78,8 +79,6 @@ myAngular.controller("myControl",function($scope){
 
     $scope.today = new Date();
 
-    $scope.name = "Ümit Dengiz";
-
     $scope.customer = {
         "name" : "Ragnar Lothbrok",
         "country" : "Kattegat",
@@ -95,6 +94,8 @@ myAngular.controller("myControl",function($scope){
     $scope.fullName = function(){
         return $scope.firstName+ " " +$scope.lastName;
     }
+
+    $scope.selectName = ["Ada", "Java", "C", "Python", "C#"];
 
     $scope.color = "Blue";
 
@@ -121,5 +122,12 @@ myAngular.controller("myControl",function($scope){
         {name : 'Bjorn', languages : 'VueJS'},
         {name : 'Atheltsan', languages : 'NodeJS'}
     ];
+
+    $scope.cars = {
+        carName1 : "Nissan",
+        carName2 : "BMW",
+        carName3 : "Audi",
+        carName4 : "Mercedes"
+    };
 
 });
