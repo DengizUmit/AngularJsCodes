@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS - HTTP - Service</title>
+
+    <link rel="icon" type="image/x-icon" href="images/angular-js.ico">
+
+    <script src="js/angular.min.js"></script>
+
+</head>
+
+<body>
+
+    <div ng-app = "myAngular" ng-controller = "serviceControl">
+        <ul>
+            <li ng-repeat = "x in Results">Name : {{x.name}} - Languages : {{x.languages}}</li>
+        </ul>
+    </div>
+
+    <!--
+        <div ng-app = "myAngular" ng-controller = "serviceControl">
+        <h3>Data : {{message}}</h3>
+        <h3>Status : {{statusCode}}</h3>
+        <h3>StatusText : {{statusText}}</h3>
+    </div>
+    -->
+
+    <script src="js/app.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controller.js"></script>
+
+</body>
+
+</html>

@@ -18,18 +18,28 @@ myAngular.controller("filterControl",function($scope){
     }
 });
 
+myAngular.controller("serviceControl",function($scope, $http){
+    $http({
+        method : "GET",
+        url : "customers.php"
+    }).then(function(response){
+        $scope.Results = response.data.records;
+        /*$scope.message = response.data;
+        $scope.statusCode = response.status;
+        $scope.statusText = response.statusText;*/
+    }, function(response){
+        $scope.message = response.data;
+        $scope.statusCode = response.status;
+        $scope.statusText = "Hay Aksi!!1";
+
+    });
+});
+
 
 /*
 myAngular.controller("serviceControl",function($scope, $location){
     $scope.message = $location.absUrl();
 });
-
-myAngular.controller("serviceControl",function($scope, $http){
-    $http.get("trial.html").then(function(response){
-        $scope.message = response.data;
-    });
-});
-
 
 myAngular.controller("serviceControl",function($scope, $timeout){
     $scope.message = "Hi";
@@ -48,12 +58,11 @@ myAngular.controller("serviceControl",function($scope, $interval){
 myAngular.controller("serviceControl",function($scope, hex){
     $scope.message = hex.specialFunction(256);
 });
-*/
 
 myAngular.controller("serviceControl",function($scope, hex){
     $scope.numbers = [255,250, 200];
 });
-
+*/
 
 myAngular.controller("limitControl",function($scope){
 
