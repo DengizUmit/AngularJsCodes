@@ -16,22 +16,44 @@ myAngular.controller("filterControl",function($scope){
     $scope.orderMe = function(par){
         $scope.myOrder = par;
     }
-
 });
 
-myAngular.filter("myCustomFormat", function(){
-    return function(par){
-        var i, harf, kelime = "";
-        for( i = 0; i<par.length;i++){
-            harf = par[i];
-            if( i%2 == 0){
-                harf = harf.toUpperCase();
-            }
-            kelime += harf;
-        }
-        return kelime;
-    }
+
+/*
+myAngular.controller("serviceControl",function($scope, $location){
+    $scope.message = $location.absUrl();
 });
+
+myAngular.controller("serviceControl",function($scope, $http){
+    $http.get("trial.html").then(function(response){
+        $scope.message = response.data;
+    });
+});
+
+
+myAngular.controller("serviceControl",function($scope, $timeout){
+    $scope.message = "Hi";
+    $timeout(function(){
+        $scope.message = "How are you ?";
+    },1000);
+});
+
+myAngular.controller("serviceControl",function($scope, $interval){
+    $scope.message = new Date().toLocaleTimeString();
+    $interval(function(){
+        $scope.message = new Date().toLocaleTimeString();
+    },1000);
+});
+
+myAngular.controller("serviceControl",function($scope, hex){
+    $scope.message = hex.specialFunction(256);
+});
+*/
+
+myAngular.controller("serviceControl",function($scope, hex){
+    $scope.numbers = [255,250, 200];
+});
+
 
 myAngular.controller("limitControl",function($scope){
 
