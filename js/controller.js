@@ -133,6 +133,10 @@ myAngular.controller("myControl",function($scope){
     $scope.result = true;
     $scope.hour = 15;
 
+    $scope.user = "Ümit";
+    $scope.user2 = angular.lowercase($scope.user);
+    //$scope.user2 = angular.isString($scope.user);
+    $scope.hour = angular.isNumber($scope.hour);
 });
 
 myAngular.controller("eventControl",function($scope) {
