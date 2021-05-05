@@ -130,4 +130,23 @@ myAngular.controller("myControl",function($scope){
         carName4 : "Mercedes"
     };
 
+    $scope.result = true;
+    $scope.hour = 15;
+
+});
+
+myAngular.controller("eventControl",function($scope) {
+
+    /*$scope.count = 0;*/
+
+    $scope.myCounter = function(par) {
+        /*$scope.count++;*/
+        $scope.x = par.clientX;
+        $scope.y = par.clientY;
+    };
+
+    $scope.showMe = false;
+    $scope.toggleSwitch = function() {
+        $scope.showMe =! $scope.showMe;
+    };
 });

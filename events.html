@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS - Events </title>
+
+    <link rel="icon" type="image/x-icon" href="images/angular-js.ico">
+
+    <script src="js/angular.min.js"></script>
+
+</head>
+
+<body>
+
+    <div ng-app = "myAngular" ng-controller = "eventControl">
+
+        <h1 ng-mousemove = "count = count + 1">Mouse Move</h1>
+        <button ng-click = "count = count + 1"> Click Me</button>
+        <button ng-click = "myCounter()"> Click Me</button>
+        <h3>{{count}}</h3>
+
+        <button ng-dblclick = "dbcount = dbcount + 1"> DbClick Me</button>
+        <h3>{{dbcount}}</h3>
+
+        <h1 ng-mousemove = "myCounter($event)">Mouse Move</h1>
+        <h3>Koordinatlar : {{x+ " , " +y}}</h3>
+
+        <button ng-dblclick = "toggleSwitch()">Click Me</button>
+        <div ng-show = "showMe">
+            <h2>Language</h2>
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+            <div>AngularJS</div>
+            <div>VueJS</div>
+            <div>ReactJS</div>
+        </div>
+        <h3>{{dbcount}}</h3>
+        
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controller.js"></script>
+
+</body>
+
+</html>
