@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS - Route </title>
+
+    <link rel="icon" type="image/x-icon" href="images/angular-js.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+
+    <style>
+        div{
+            transition: all linear 1s;
+            width: 100%;
+            height: 100px;
+            background-color: darkcyan;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        .ng-hide{
+            height: 0;
+            width: 0;
+            background-color: transparent;
+            top: 200px;
+            left: 200px;
+        }
+    </style>
+
+</head>
+
+<body ng-app = "myAngular">
+
+    <p><a href="#/!">Ana Sayfa</a></p>
+    <p><a href="#!red">Kırmızı Sayfa</a></p>
+    <p><a href="#!green">Yeşil Sayfa</a></p>
+    <p><a href="#!blue">Mavi Sayfa</a></p>
+
+    <div ng-view></div>
+    
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controller.js"></script>
+
+</body>
+
+</html>

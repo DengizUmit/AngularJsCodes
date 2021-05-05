@@ -1,4 +1,8 @@
-var myAngular = angular.module("myAngular",[]);
+/*var myAngular = angular.module("myAngular",[]);*/
+
+
+
+var myAngular = angular.module("myAngular", ["ngRoute"]);
 
 myAngular.directive("testDirective", function(){
     return {
