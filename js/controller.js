@@ -149,4 +149,17 @@ myAngular.controller("eventControl",function($scope) {
     $scope.toggleSwitch = function() {
         $scope.showMe =! $scope.showMe;
     };
+
+});
+
+myAngular.controller("formControl",function($scope) {
+
+    $scope.username = "V For Vandetta";
+    $scope.firstValue = {firstName : "Ümit", lastName : "Dengiz"};
+
+    $scope.reset = function(){
+        $scope.user = angular.copy($scope.firstValue);
+    };
+    $scope.reset();
+
 });

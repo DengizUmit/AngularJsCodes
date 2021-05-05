@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS - Forms </title>
+
+    <link rel="icon" type="image/x-icon" href="images/angular-js.ico">
+
+    <script src="js/angular.min.js"></script>
+
+</head>
+
+<body>
+
+    <div ng-app = "myAngular" ng-controller = "formControl">
+        
+        <form">
+            Username : <input type="text" ng-model = "username">
+        </form>
+        <h3>Username : {{username}}</h3>
+
+        <form">
+            Başlığı görmek için tıkla : <input type="checkbox" ng-model = "showMe">
+        </form>
+        <h3 ng-show = "showMe\n">Yasssssssss</h3>
+
+        <form>
+            <input type="radio" ng-model = "showRadio" value="html">HTML
+            <input type="radio" ng-model = "showRadio" value="css">CSS
+            <input type="radio" ng-model = "showRadio" value="js">JavaScript
+            <input type="radio" ng-model = "showRadio" value="angular">AngularJS
+
+            <select ng-model = "showSelect">
+                <option value=""/>
+                <option value="nodejs">Node JS</option>
+                <option value="angularjs">Angular JS</option>
+                <option value="vuejs">Vue JS</option>
+            </select>
+        </form>
+
+        <div ng-switch = "showRadio">
+            <div ng-switch-when = "html">
+                <h2>HTML</h2>
+                <P>Welcome to HTML</P>
+            </div>
+            <div ng-switch-when = "css">
+                <h2>CSS</h2>
+                <P>Welcome to CSS</P>
+            </div>
+            <div ng-switch-when = "js">
+                <h2>JavaScript</h2>
+                <P>Welcome to JavaScript</P>
+            </div>
+            <div ng-switch-when = "angular">
+                <h2>AngularJS</h2>
+                <P>Welcome to AngularJS</P>
+            </div>
+        </div>
+
+        <div ng-switch = "showSelect">
+            <div ng-switch-when = "nodejs">
+                <h2>Node JS</h2>
+                <P>Welcome to Node JS</P>
+            </div>
+            <div ng-switch-when = "angularjs">
+                <h2>Angular JS</h2>
+                <P>Welcome to Angular JS</P>
+            </div>
+            <div ng-switch-when = "vuejs">
+                <h2>Vue JS</h2>
+                <P>Welcome to Vue JS</P>
+            </div>
+        </div>
+
+        <form novalidate>
+            <p> First Name : <input type="text" ng-model = "user.firstName"></P>
+            <p> Last Name :  <input type="text" ng-model = "user.lastName"></P>
+                <button ng-click = "reset()">Reset</button>
+        </form>
+        <p>Form Verileri : {{user}}</p>
+        <p>Atanan Veriler : {{firstValue}}</p>
+
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controller.js"></script>
+
+</body>
+
+</html>
